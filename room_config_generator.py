@@ -5,19 +5,6 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select
 import config
 
-def input_valid_time(prompt):
-    while True:
-        time_str = input(prompt)
-        try:
-            hour, minute = map(int, time_str.split(":"))
-            if 0 <= hour <= 12 and 0 <= minute <= 59:
-                return f"{hour:02d}:{minute:02d}"
-            else:
-                print("Invalid time format. Please enter a valid time (HH:MM).")
-        except ValueError:
-            print("Invalid time format. Please enter a valid time (HH:MM).")
-
-
 def generate_xpaths(index):
     base_xpath = "/html/body/form/div[2]/div/div[{}]/select[{}]"
     return {

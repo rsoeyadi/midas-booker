@@ -25,7 +25,7 @@ driver.get(config.link)
 for room in room_config.rooms:
     driver.find_element("xpath", room.room_number_xpath).click() 
 
-time_remaining = get_time_till(13, 27) 
+time_remaining = get_time_till(config.hour, config.minute) 
 time.sleep(time_remaining)
 
 driver.find_element("xpath", "/html/body/form/button").click()
