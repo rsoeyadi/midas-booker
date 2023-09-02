@@ -1,4 +1,5 @@
 /.history
+.DS_Store
 config.py
 room_config.py
 __pycache__/
