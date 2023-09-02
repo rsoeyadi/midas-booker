@@ -21,11 +21,8 @@ def input_valid_time(prompt):
 def generate_xpaths(index):
     base_xpath = "/html/body/form/div[2]/div/div[{}]/select[{}]"
     return {
-        # Increment indices by 6
         "hour_xpath": f"\'{base_xpath.format(6 * index, 1)}\'",
-        # Increment indices by 6
         "min_xpath": f"\'{base_xpath.format(6 * index, 2)}\'",
-        # Increment indices by 6
         "pm_xpath": f"\'{base_xpath.format(6 * index, 3)}\'",
     }
 
