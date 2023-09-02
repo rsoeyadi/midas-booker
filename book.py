@@ -1,3 +1,4 @@
+import time
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
@@ -24,8 +25,8 @@ driver.get(config.link)
 for room in room_config.rooms:
     driver.find_element("xpath", room.room_number_xpath).click() 
 
-# time_remaining = get_time_till(1, 23) # format is ([ 1 - 9 ], [ 10 - 59 ])
-# time.sleep(time_remaining)
+time_remaining = get_time_till(13, 27) 
+time.sleep(time_remaining)
 
 driver.find_element("xpath", "/html/body/form/button").click()
 
