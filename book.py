@@ -55,5 +55,9 @@ driver.find_element(By.XPATH, "/html/body/form/div[4]/table/tbody/tr[3]/td[2]/in
 submit_button = driver.find_element(By.XPATH, "/html/body/form/div[4]/button")
 submit_button.click()
 
+print("Booking finished...")
+time.sleep(1)
+print("\nClosing now")
+driver.close()
 while (True): # keep the browser open
     pass

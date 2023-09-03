@@ -1,9 +1,9 @@
-from time import sleep
+import config
+import os
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import Select
-import config
+from time import sleep
 
 def generate_xpaths(index):
     base_xpath = "/html/body/form/div[2]/div/div[{}]/select[{}]"
@@ -96,6 +96,9 @@ while True:
     if "y" not in another_room:
         break
     rooms.remove(selected_room)
+    os.system('cls' if os.name == 'nt' else 'clear')
+
+    
 
 class Room:
     def __init__(self, room_number_xpath, hour, min, am_pm, hour_xpath, min_xpath, pm_xpath):
