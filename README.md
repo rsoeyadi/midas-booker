@@ -16,6 +16,7 @@ Before using this script, ensure you have the following:
 
 - Python 3.x installed on your system.
 - Selenium library installed (`pip install selenium`).
+- Pytz library installed (`pip install pytz`).
 - Chrome WebDriver installed and configured. [Download here](https://chromedriver.chromium.org/downloads).
 - `config.py` and `room_config.py` files set up with your preferences.
 
