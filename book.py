@@ -31,14 +31,15 @@ time.sleep(time_remaining)
 driver.find_element("xpath", "/html/body/form/button").click()
 
 # choose the new day
-today = driver.find_element(By.XPATH, "/html/body/form/div[2]/div[1]/div/table/tbody/tr[1]/td[6]")  # click today's date
+today = driver.find_element(By.CLASS_NAME, "ui-datepicker-today")  # click today's date
 siblings = today.find_elements(By.XPATH, "following-sibling::*") # the following dates in our row
 next_row = today.find_elements(By.XPATH, "./../following-sibling::tr[1]//td") # the next row
 
-if len(siblings) < 4: # we should check the next row
-    next_row[ 4 - len(siblings) - 1].click()  # add - 1 if testing
+if len(siblings) < 3: # we should check the next row
+    next_row[ 3 - len(siblings) - 1].click()
 else:
-    siblings[3].click()
+    siblings[2].click()
+
 driver.find_element(By.XPATH, "/html/body/form/button[2]").click() # next button
 
 for i, room in enumerate(room_config.rooms):
@@ -59,5 +60,3 @@ print("Booking finished...")
 time.sleep(1)
 print("\nClosing now")
 driver.close()
-while (True): # keep the browser open
-    pass

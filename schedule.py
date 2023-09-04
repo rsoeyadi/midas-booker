@@ -1,3 +1,6 @@
+import os
+
+
 def input_valid_time(prompt):
     while True:
         print("Enter the time in military format (HH:MM):")
@@ -12,8 +15,12 @@ def input_valid_time(prompt):
             print("Invalid military time format. Please enter a valid time (HH:MM).")
 
 hour, minute = input_valid_time("When do you need this to run? ")
-with open("config.py", "r") as config_file:
-    lines = config_file.readlines()
+
+try:
+    with open("config.py", "r") as config_file:
+        lines = config_file.readlines()
+except FileNotFoundError:
+    lines = []
 
 hour_line_present = any("hour =" in line for line in lines)
 minute_line_present = any("minute =" in line for line in lines)

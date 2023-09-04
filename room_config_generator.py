@@ -13,7 +13,6 @@ def generate_xpaths(index):
         "pm_xpath": f"\'{base_xpath.format(6 * index, 3)}\'",
     }
 
-
 chrome_options = Options()
 chrome_options.add_argument("--headless")
 driver = webdriver.Chrome(options=chrome_options)
@@ -25,7 +24,7 @@ rooms = [room.text for room in room_labels]
 
 selected_room = rooms[0]
 print("WARNING: this will overwrite your current room configuration. Press ctrl + c at any time to cancel and exit\n")
-sleep(3)
+sleep(1)
 
 room_data = []
 while True:
@@ -97,8 +96,6 @@ while True:
         break
     rooms.remove(selected_room)
     os.system('cls' if os.name == 'nt' else 'clear')
-
-    
 
 class Room:
     def __init__(self, room_number_xpath, hour, min, am_pm, hour_xpath, min_xpath, pm_xpath):
