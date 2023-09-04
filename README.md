@@ -1,6 +1,6 @@
 # Practice Room Booking Automation
 
-This Python script project automates the process of booking practice rooms at the New England Conservatory. It allows you to schedule practice rooms on the newly opened day (it is meant to run at midnight, when the new day is available). The script runs on a schedule specified by the user, ensuring that you can book a room as soon as it becomes available.
+This Python script project automates the process of booking practice rooms at the New England Conservatory. The script runs on a schedule specified by the user, ensuring that you can book a room as soon as it becomes available.
 
 ## Features
 
@@ -19,6 +19,7 @@ Before using this script, ensure you have the following:
 - Pytz library installed (`pip install pytz`).
 - Chrome WebDriver installed and configured. [Download here](https://chromedriver.chromium.org/downloads).
 - `config.py` and `room_config.py` files set up with your preferences.
+- Name, NEC email address, and the link to the reservation system
 
 ## Getting Started
 
