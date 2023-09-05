@@ -1,6 +1,6 @@
 # Practice Room Booking Automation
 
-This Python script project automates the process of booking practice rooms at the New England Conservatory. The script runs on a schedule specified by the user, ensuring that you can book a room as soon as it becomes available.
+This Python script project automates the process of booking practice rooms at New England Conservatory. The script runs on a schedule specified by the user, ensuring that you can book a room as soon as it becomes available.
 
 ## Features
 
