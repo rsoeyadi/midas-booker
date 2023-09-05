@@ -28,3 +28,7 @@ Before using this script, ensure you have the following:
    ```shell
    git clone <repository-url>
    cd <repository-directory>
+
+2. Run `config_generator.py` to enter your name, NEC email address, and the link to the reservation system
+3. Run `schedule.py` to specify when you need the script to run. It will likely need to be 00:00 for midnight
+4. Run `book.py` via a cron job. At the specified time from #3, the room will be booked
