@@ -1,6 +1,5 @@
 import os
 
-
 def input_valid_time(prompt):
     while True:
         print("Enter the time in military format (HH:MM):")
